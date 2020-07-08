@@ -26,11 +26,26 @@
 
 /* Count the number of letters in string s.*/
 
-int lettercount (char *s)
+int lettercount(char* s)
 {
-  return 0;
-}
+    int d=0, lD=0, i ;
 
+    while(s[d]!='\0')
+    {
+        i = (int)s[d] ;
+
+        if(i > 64 && i < 91)
+        {
+            lD++ ;
+        }
+        else if ( i >  96 && i < 123)
+        {
+          lD++ ;
+        }
+        d++ ;
+    }
+    return lD ;
+}
 
 
 /* Do not edit this function. */
