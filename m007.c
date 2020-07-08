@@ -28,23 +28,23 @@
 
 int lettercount(char* s)
 {
-    int d=0, lD=0, i ;
+    int c = 0, lC = 0 , i ;
 
-    while(s[d]!='\0')
+    while(s[c]!='\0')
     {
-        i = (int)s[d] ;
+        i = (int)s[c] ;
 
         if(i > 64 && i < 91)
         {
-            lD++ ;
+            lC++ ;
         }
         else if ( i >  96 && i < 123)
         {
-          lD++ ;
+          lC++ ;
         }
-        d++ ;
+        c++ ;
     }
-    return lD ;
+    return lC ;
 }
 
 
