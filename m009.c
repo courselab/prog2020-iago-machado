@@ -23,8 +23,33 @@
 
 /* Sort the first 'n' integers values in 'vector'. */
 
-void sort (int* vector, int n)
+void sort (int* vector, int n) 
 {
+  int p ;
+  int h ;
+  int posicao ;
+  int count ;
+  int auxiliar ;
+  
+  
+
+  p = 0 ;
+
+  auxiliar = n - 1 ;
+
+  for(count = 0; count<=n; count++)
+  {
+    p = 0;
+
+    for(p; p<auxiliar ; p++)
+    { h = p + 1 ;
+      if(vector[p] > vector[h])
+      { posicao = vector[h] ;
+        vector[h] = vector[p] ;
+        vector[p] = posicao ;
+      }
+    }
+  }
 }
 
 #define USAGE "m009 <num1> <nun2> ... \n"

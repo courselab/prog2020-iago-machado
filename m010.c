@@ -30,7 +30,61 @@ enum {sun, mon, tue, wed, thu, fri, sat};
 
 int day_of_week (int day, int month)
 {
-  return sun;
+  int h = 0;
+
+  int D [12];
+
+  int resultado = 0;
+  
+  D[0] = 31;
+  D[1] = 29;
+  D[2] = 31;
+  D[3] = 30;
+  D[4] = 31; 
+  D[5] = 30;
+  D[6] = 31;
+  D[7] = 31;
+  D[8] = 30;
+  D[9] = 31;
+  D[10] = 30;
+  D[11] = 31;
+ 
+   while (h < month - 1)
+  {
+    resultado = resultado + D[h];
+    h++;
+  }
+  resultado=resultado+ day;
+
+  switch (resultado%7)  
+
+  {
+    case 6:
+      return mon;
+      break;
+    case 5:
+      return sun;
+      break;
+    case 4:
+      return sat;
+      break;
+    case 3:
+      return fri;
+      break;
+    case 2:
+      return thu;
+      break;
+    case 1:
+      return wed;
+      break;
+    case 0:
+      return tue;
+      break; 
+    default:
+    return 0;
+      break;  
+  }
+
 }
 
 /* Do not edit function main. */
@@ -54,30 +108,30 @@ int main (int argc, char **argv)
   switch (dweek)
     {
     case sun:
-      printf ("Sunday\n");
-      break;
+      printf ("Sunday\n") ;
+      break ;
     case mon:
-      printf ("Monday\n");
-      break;
+      printf ("Monday\n") ;
+      break ;
     case tue:
-      printf ("Tuesday\n");
-      break;
+      printf ("Tuesday\n") ;
+      break ;
     case wed:
-      printf ("Wednesday\n");
-      break;
+      printf ("Wednesday\n") ;
+      break ;
     case thu:
-      printf ("Thursday\n");
-      break;
+      printf ("Thursday\n") ;
+      break ;
     case fri:
-      printf ("Friday\n");
-      break;
+      printf ("Friday\n") ;
+      break ;
     case sat:
-      printf ("Saturday\n");
-      break;
+      printf ("Saturday\n") ;
+      break ;
     default:
-      printf ("Something wrong\n");
-      break;
+      printf ("Something wrong\n") ;
+      break ;
     }
   
-  return 0;
+  return 0 ;
 }
